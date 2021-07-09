@@ -75,6 +75,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
   color: #000000;
 }
 
@@ -94,6 +95,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
   color: var(--primary-color);
 }
 
@@ -125,14 +127,15 @@ body {
 }
 
 .menu-item::after {
-  content: "";
   position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
 
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  left: 0;
-  bottom: 0;
+
   background-color: var(--accent-color);
 }
 
@@ -161,6 +164,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
   color: var(--secondary-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -183,51 +187,61 @@ body {
 
 /* --------------------Оформление раздела Hero ---------------------*/
 .hero {
-  text-align: center;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding: 200px 0;
 
+  text-align: center;
+
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: var(--hero-color);
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero_img.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero-head {
   margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
   color: var(--third-color);
 }
 
 /*-------------------- Оформление кнопки "Заказать услугу" -----------------*/
 .hero-button {
   padding: 10px 32px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
+
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  cursor: pointer;
+
   color: var(--third-color);
   background: var(--accent-color);
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
 }
 
 .hero-button:hover,
@@ -252,15 +266,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 270px;
   height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
+
   background: var(--button-color);
 }
 
 .features-head {
   margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -272,6 +289,7 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: var(--secondary-color);
 }
 
@@ -312,6 +330,7 @@ body {
 
 .worklist {
   margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -326,6 +345,7 @@ body {
 
 .team {
   margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -340,9 +360,11 @@ body {
 
 .team-list-item {
   margin-left: 30px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
   background-color: var(--third-color);
 }
 
@@ -352,6 +374,7 @@ body {
 
 .name {
   margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -361,10 +384,12 @@ body {
 
 .profession {
   margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--secondary-color);
 }
 
@@ -382,11 +407,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--icon-color);
-  background-color: var(--third-color);
-  border-radius: 50%;
   width: 44px;
   height: 44px;
+
+  border-radius: 50%;
+ 
+  color: var(--icon-color);
+  background-color: var(--third-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -406,11 +433,13 @@ body {
 
 .customers-head {
   margin-bottom: 50px;
+  
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
   text-align: center;
   letter-spacing: 0.03em;
+
   color: var(--primary-color);
 }
 
@@ -429,9 +458,11 @@ body {
   align-items: center;
   width: 170px;
   height: 92px;
+
   border: 1px solid;
   border-color: var(--icon-color);
   border-radius: 4px;
+
   color: var(--icon-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -451,6 +482,7 @@ body {
 /* --------------- Оформление футера ---------------------------- */
 .footer-section {
   padding: 60px 0;
+
   background-color: var(--fourth-color);
 }
 
@@ -467,11 +499,13 @@ body {
 .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
+
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
   color: var(--third-color);
 }
 
@@ -511,11 +545,13 @@ body {
 
 .footer-icon-head {
   margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
   color: var(--third-color);
 }
 
@@ -531,11 +567,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--third-color);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
+
   width: 44px;
   height: 44px;
+
+  border-radius: 50%;
+  color: var(--third-color);
+  background-color: rgba(255, 255, 255, 0.1);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -565,13 +603,14 @@ body {
 
 .filter-btn {
   padding: 6px 22px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  cursor: pointer;
+
   border: none;
   border-radius: 4px;
   background-color: var(--button-color);
@@ -579,14 +618,18 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  cursor: pointer;
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
-  background-color: var(--accent-color);
-  color: var(--third-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: var(--third-color);
+  background-color: var(--accent-color);
+  
 }
 
 /* --------------- Оформление галерея работ ---------------------------- */
@@ -621,20 +664,23 @@ body {
 
 .overlay {
   position: absolute;
-  transform: translateY(100%);
-
-  top: 0%;
+  top: 0;
   overflow: auto;
+
   width: 100%;
   height: 100%;
   padding: 63px 24px;
+
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
+
   color: var(--third-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -670,8 +716,17 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100vw;
   height: 100vh;
+
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  
+  transform: scale(1);
+  transition: opacity 400ms linear, transform 300ms linear;
+
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -683,11 +738,32 @@ body {
 
   width: 528px;
   height: 581px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--third-color);
 }
 
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+}
+
 .close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+
+  cursor: pointer;
 }
